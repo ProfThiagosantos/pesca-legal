@@ -1,0 +1,199 @@
+:root {
+    --primary-color: #1a3a4b;
+    --secondary-color: #2e6f40;
+    --dark-color: #222;
+    --light-color: #f8f9fa;
+    --accent-color: #d97706;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--dark-color);
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: var(--primary-color);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span { color: var(--accent-color); }
+
+.navbar ul { display: flex; list-style: none; }
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover { color: var(--accent-color); }
+
+/* HERO */
+.hero {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+.btn {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover { background-color: #21522e; }
+
+/* LAYOUT UTILITÁRIOS */
+.section-container { padding: 70px 8%; }
+.bg-light { background-color: var(--light-color); }
+.section-title { text-align: center; font-size: 32px; margin-bottom: 40px; color: var(--primary-color); }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* CARDS DE EQUIPAMENTO */
+.card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.card:hover { transform: translateY(-5px); }
+.card img { width: 100%; height: 220px; object-fit: cover; }
+.card-body { padding: 20px; }
+.card-body h3 { margin-bottom: 10px; color: var(--primary-color); }
+
+/* CARDS HORIZONTAIS DE TÉCNICAS */
+.card-horizontal {
+    display: flex;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    align-items: center;
+}
+
+.icon-tech {
+    font-size: 35px;
+    color: var(--secondary-color);
+    margin-right: 20px;
+}
+
+/* CALENDÁRIO */
+.calendar-wrapper {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.calendar-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#month-select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.legend { display: flex; gap: 15px; }
+.legend-item { display: flex; align-items: center; font-size: 14px; }
+.circle { width: 12px; height: 12px; border-radius: 50%; display: inline-block; margin-right: 5px; }
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+.calendar-day {
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+}
+
+/* CORES DO CALENDÁRIO (Simulação Lunar) */
+.excelent { background-color: #2e6f40; } /* Verde */
+.good { background-color: #d97706; }    /* Laranja/Amarelo */
+.bad { background-color: #9ca3af; }     /* Cinza */
+
+/* FOOTER */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .navbar { flex-direction: column; gap: 15px; }
+    .navbar ul li a { margin: 0 10px; }
+    .hero-content h1 { font-size: 32px; }
+}
