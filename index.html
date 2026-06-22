@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasterPesca | O Portal do Pescador Profissional</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Ícones Profissionais -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAV BAR -->
+    <header class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-fish-fins"></i> Master<span>Pesca</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#equipamentos">Equipamentos</a></li>
+                <li><a href="#tecnicas">Técnicas</a></li>
+                <li><a href="#calendario">Calendário Lunar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=1600') no-repeat center center/cover;">
+        <div class="hero-content">
+            <h1>Domine a Arte da Pesca</h1>
+            <p>Guia completo com técnicas avançadas, melhores equipamentos e a tabela lunar exata para a sua pescaria.</p>
+            <a href="#calendario" class="btn">Ver Calendário de Hoje</a>
+        </div>
+    </section>
+
+    <!-- EQUIPAMENTOS -->
+    <section id="equipamentos" class="section-container">
+        <h2 class="section-title">Equipamentos Essenciais</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1611091564852-df6ee6f2a6df?q=80&w=600" alt="Varas e Carretilhas">
+                <div class="card-body">
+                    <h3>Varas e Carretilhas</h3>
+                    <p>Como equilibrar a libragem da vara com a velocidade de recolhimento da carretilha para cada espécie.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1532581291347-9c39cf10a73c?q=80&w=600" alt="Iscas Artificiais">
+                <div class="card-body">
+                    <h3>Iscas Artificiais</h3>
+                    <p>Aprenda a escolher entre iscas de superfície, meia-água e fundo dependendo da temperatura da água.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TÉCNICAS DE PESCA -->
+    <section id="tecnicas" class="section-container bg-light">
+        <h2 class="section-title">Técnicas e Dicas</h2>
+        <div class="grid">
+            <div class="card-horizontal">
+                <i class="fa-solid fa-anchor icon-tech"></i>
+                <div>
+                    <h3>Pesca de Arremesso (Baitcasting)</h3>
+                    <p>O segredo do arremesso preciso perto de estruturas e troncos onde os grandes predadores se escondem.</p>
+                </div>
+            </div>
+            <div class="card-horizontal">
+                <i class="fa-solid fa-water icon-tech"></i>
+                <div>
+                    <h3>Leitura de Ambiente</h3>
+                    <p>Saiba identificar "remansos", estruturas submersas e canais onde os peixes se alimentam ativamente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALENDÁRIO DE PESCA -->
+    <section id="calendario" class="section-container">
+        <h2 class="section-title">Calendário de Pesca Intuitivo</h2>
+        <p class="section-subtitle">Selecione o mês para checar as melhores fases da lua para a pesca.</p>
+        
+        <div class="calendar-wrapper">
+            <div class="calendar-controls">
+                <select id="month-select">
+                    <option value="0">Janeiro</option>
+                    <option value="1">Fevereiro</option>
+                    <option value="2">Março</option>
+                    <option value="3">Abril</option>
+                    <option value="4">Maio</option>
+                    <option value="5">Junho</option>
+                </select>
+                <div class="legend">
+                    <span class="legend-item"><span class="circle excelent"></span> Excelente</span>
+                    <span class="legend-item"><span class="circle good"></span> Boa</span>
+                    <span class="legend-item"><span class="circle bad"></span> Fraca</span>
+                </div>
+            </div>
+            <div class="calendar-grid" id="calendar-days">
+                <!-- Dias gerados via Javascript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 MasterPesca. Todos os direitos reservados. Pesque e Solte!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
